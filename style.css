@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7c6c1;
+  font-family: samim;
+}
+#container {
+  width: 900px;
+  min-height: 580px;
+  margin: 70px auto;
+  background-color: white;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.397);
+  display: flex;
+  gap: 0.2;
+  color: #757575;
+  font-weight: 900;
+}
+#form h1,
+a {
+  color: #ff9d9c;
+}
+#form {
+  /* border: 1px solid green; */
+  width: 28em;
+  padding: 0 0.4em;
+}
+#form h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 2em 0 0.7em;
+}
+.input-control {
+  text-align: right;
+  width: 100%;
+  margin-bottom: 1.9em;
+  height: 3.7em;
+  border: none;
+  border-radius: 30px;
+  padding: 0 2em 0 4em;
+  background: #b4b4b42e;
+  transition: all 00ms;
+}
+.input-control::placeholder {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.input-control:focus {
+  outline: none;
+  color: #ff9d9c;
+  background-color: #f4cece9f;
+  background: #f4cece9f url("img/icons8-circle-24.png") left 2em center/15px
+    no-repeat;
+}
+.red::before {
+  display: inline-block;
+  border-radius: 50%;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-color: #931210;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.input-control:not(:focus):hover {
+  background-color: #b4b4b42e;
+  background: #b4b4b42e url("img/icons8-circle-30.png") left 2em center/15px
+    no-repeat;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+input[type="radio"] {
+  margin-left: 4em;
+  accent-color: #3f3e3e4f;
+  transform: scale(1);
+}
+input[type="radio"] + label {
+  font-size: 1rem;
+}
+#bottom-content {
+  margin-top: 2.5em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+#registration-button {
+  border: none;
+  border-radius: 30px;
+  padding: 0.3em 2.3em;
+  font-size: 1.8rem;
+  color: white;
+  background-color: #fe8684ce;
+  font-weight: 900;
+}
+@font-face {
+  font-family: samim;
+  font-style: normal;
+  font-weight: 900;
+  src: url("fonts/Samim-Bold.woff");
+  src: url("fonts/Samim-Bold.eot"), url("fonts/Samim-Bold.ttf"),
+    url("fonts/Samim-Bold.woff2");
+}
+/* responsive */
+@media (max-width: 920px), (max-width: 500px) {
+  #container {
+    width: max-content;
+    display: block;
+  }
+  #container img {
+    display: block;
+    margin: 0 auto;
+  }
+  #form {
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+  #form h1 {
+    padding-top: 0;
+  }
+}
+@media (max-width: 920px) {
+  #container {
+    min-height: 950px;
+  }
+  #container img {
+    width: 300px;
+  }
+  #form {
+    width: 400px;
+  }
+  #registration-button {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 500px) {
+  #container {
+    min-height: 830px;
+  }
+  #container img {
+    width: 200px;
+  }
+  #form {
+    width: 300px;
+  }
+
+  #registration-button {
+    font-size: 1rem;
+  }
+}
